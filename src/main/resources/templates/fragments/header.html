@@ -1,0 +1,10 @@
+<div th:fragment="header(title)">
+  <header>
+    <h1>Welcome to My Website</h1>
+    <h3 th:text="${title}"></h3>
+    <nav>
+      <a th:href="@{/home}">home</a>
+      <a th:href="@{/about}">about</a>
+    </nav>
+  </header>
+</div>

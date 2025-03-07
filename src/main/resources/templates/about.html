@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{'/css/output.css'}" />
+    <style>
+      .testing {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="testing text-4xl bg-red-400">this is about us.</h1>
+    <h2 class="p-6" th:text="${name}"></h2>
+    <h3 th:text="${weight}">weight</h3>
+
+    <!-- replace the content by th -->
+    <div th:replace="~{base :: parent}">
+      <section>
+        <h1>this content is not replaced by th.</h1>
+      </section>
+    </div>
+  </body>
+</html>
