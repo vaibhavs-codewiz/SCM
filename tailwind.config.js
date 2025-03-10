@@ -1,6 +1,4 @@
-import { type Config } from "tailwindcss";
-
-const config: Config = {
+const Config = {
   content: [
     "./src/main/resources/templates/**/*.html",
     "./src/main/resources/static/**/*.html",
@@ -10,6 +8,7 @@ const config: Config = {
     extend: {},
   },
   plugins: [],
+  darkMode: "selector",
 };
 
 export default config;

@@ -26,7 +26,6 @@ public class MyController {
         //sending data to view
         model.addAttribute("name", "David");
         model.addAttribute("weight", "65");
-        
         return "about";
     }
 
@@ -34,6 +33,21 @@ public class MyController {
     public String serviceControl()
     {
         return "service";
+    }
+    @RequestMapping("/contact")
+    public String contactControl()
+    {
+        return "contact";
+    }
+    @RequestMapping("/login")
+    public String loginControl()
+    {
+        return "login";
+    }
+    @RequestMapping("/signup")
+    public String signupControl()
+    {
+        return "register";
     }
  
     

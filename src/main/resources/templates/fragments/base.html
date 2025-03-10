@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html
+  class="dark"
   lang="en"
   xmlns:th="http://www.thymeleaf.org"
   th:fragment="parent(content,title,script)"
@@ -17,8 +18,9 @@
   <body>
     <!-- navbar -->
     <header th:replace="components/navbar :: navbar"></header>
-
-    <content class="" th:replace="${content}"></content>
+    <div class="dark:bg-gray-800 text-white p-4 w-full h-screen">
+      <content class="bg-gray-900" th:replace="${content}"></content>
+    </div>
     <footer class="bg-red-300 p-4">this is my footer.</footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <th:block th:replace="${script}"></th:block>
