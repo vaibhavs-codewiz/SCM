@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  th:replace="fragments/base :: parent(~{::#content},~{::title},~{})"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>index</title>
+    <link rel="stylesheet" th:href="@{'/css/output.css'}" />
   </head>
   <body>
-    <div th:replace="fragments/header :: header('title call from index')"></div>
-    <h1>this is index</h1>
+    <section id="content">this is index page content.</section>
   </body>
 </html>

@@ -9,6 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MyController {
   
+    @RequestMapping("/")
+    public String indexControl()
+    {
+        return "index";
+    }
+    @RequestMapping("/home")
+    public String homeControl(Model model)
+    {
+        return "home";
+    }
     @RequestMapping("/about")
     public String myAbout(Model model) {
         System.out.println("this is about controller.");
@@ -19,5 +29,12 @@ public class MyController {
         
         return "about";
     }
+
+    @RequestMapping("/service")
+    public String serviceControl()
+    {
+        return "service";
+    }
+ 
     
 }
